@@ -1,0 +1,47 @@
+header {
+    height: 100px;
+    background-color: hotpink;
+    @media (max-width: 1200px) {
+        background-color: lightblue;
+    }
+    .container {
+        @include mycontainer;
+        @include goflex;
+        height: 100%;
+        .logo {
+            font-size: 52px;
+            font-weight: bold;
+            color: cyan;
+            transition: 0.4s;
+            &:hover {
+                color: $hovercolor;
+            }
+        }
+        nav {
+            width: 500px;
+            @media (max-width: 1000px) {
+                display: none;
+            }
+            ul {
+                width: 100%;
+                @include goflex;
+                a {
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: cyan;
+                    transition: 0.4s;
+                    &:hover {
+                        color: $hovercolor;
+                    }
+                }
+            }
+        }
+        .fa-bars {
+            color: cyan;
+            display: none;
+            @media (max-width: 1000px) {
+                display: inline-block;
+            }
+        }
+    }
+}
